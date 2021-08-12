@@ -17,7 +17,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="TicketID" class="control-label"></label>
-                <input asp-for="TicketID" class="form-control" />
+                <input asp-for="TicketID" class="form-control" readonly />
                 <span asp-validation-for="TicketID" class="text-danger"></span>
             </div>
             @*<div class="form-group">
@@ -42,7 +42,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="OwnerName" class="control-label"></label>
-                <input asp-for="OwnerName" class="form-control" value="@user.UserName" readonly />
+                <input asp-for="OwnerName" class="form-control" value="@User.Identity.Name"/>
             </div>
             <div class="form-group">
                 <label for="ccList" class="control-label"></label>

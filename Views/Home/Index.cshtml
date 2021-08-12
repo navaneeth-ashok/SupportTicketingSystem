@@ -7,9 +7,10 @@
         <div class="card-header"><h1 class="display-4">Welcome</h1></div>
         <div class="card-body">
             <ol class="list-group list-group-flush">
-                <li class="list-group-item">If you don't have an account please <a class="text-primary" asp-area="Identity" asp-page="/Account/Register">Register here</a> </li>
-                <li class="list-group-item">Once registered, create your <a class="text-primary" asp-controller="User" asp-action="Create">Suppot Ticket System Account</a> </li>
-                <li class="list-group-item">View the tickets created by you or assigned to you from <a class="text-primary" asp-controller="Tickets" asp-action="Index">Tickets Page</a> </li>
+                <li class="list-group-item">Create your <a class="text-primary" asp-controller="User" asp-action="Create">Suppot Ticket System Account</a> </li>
+                <li class="list-group-item">View the tickets created by you from <a class="text-primary" asp-controller="Tickets" asp-action="Index">Tickets Page</a>
+                <div class="text-muted font-italic">You need to be signed in to view any tickets.</div> 
+                </li>
             </ol>
         </div>
     </div>

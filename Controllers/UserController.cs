@@ -6,6 +6,7 @@ using SupportTicketSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Xml;
 
@@ -65,7 +66,6 @@ namespace SupportTicketSystem.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public async Task<IActionResult> Create()
         {
             // this is to send the last ID + 1 to the create view
@@ -114,7 +114,6 @@ namespace SupportTicketSystem.Controllers
             {
                 return "";
             }
-            return "";
         }
 
         public int FetchUserID(string userEmail)
@@ -162,7 +161,6 @@ namespace SupportTicketSystem.Controllers
         }
 
         [HttpPost]
-        [Authorize]
         public IActionResult Create(UserEmp newUser)
         {
             // load the xml

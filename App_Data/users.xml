@@ -49,4 +49,27 @@
     <userPasswordHash>AQAAAAEAACcQAAAAEAgtNKBszsJmflE4oyO+fOpyRA3lY+OxyCOvDv97nzHhX08/2GAoyN5jef1+0AihYA==</userPasswordHash>
     <department>TechSupport</department>
   </user>
+  <user type="Admin">
+    <userID>200004</userID>
+    <userName>
+      <firstName>Bat</firstName>
+      <middleName>Ter</middleName>
+      <lastName>Man</lastName>
+    </userName>
+    <userEmail>something@test.com</userEmail>
+    <userPasswordHash>abcdefghi</userPasswordHash>
+    <department>Engg</department>
+  </user>
+  <user type="Admin">
+    <userID>200005</userID>
+    <userName>
+      <firstName>Navaneeth</firstName>
+      <middleName>
+      </middleName>
+      <lastName>Ashok</lastName>
+    </userName>
+    <userEmail>asbdhasdvhadvh@asbdh.com</userEmail>
+    <userPasswordHash>hasbdvgavdhasbdabd</userPasswordHash>
+    <department>Engg</department>
+  </user>
 </users>

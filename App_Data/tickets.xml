@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tickets.xsd">
   <!-- lastUpdate automatically populated on every comment -->
-  <ticket lastUpdated="2021-08-12T05:05:36">
+  <ticket lastUpdated="2021-08-12T11:39:24">
     <ticketID>10001</ticketID>
     <!-- start date -->
     <issueDate>2021-05-24T10:30:00</issueDate>
@@ -10,9 +10,9 @@
     <!-- client ID -->
     <ticketOwner>200001</ticketOwner>
     <!-- current assignee ID -->
-    <ticketAssignee>100001</ticketAssignee>
+    <ticketAssignee>200003</ticketAssignee>
     <!-- status Ongoing/Resolved/NotABug -->
-    <ticketStatus>ToDo</ticketStatus>
+    <ticketStatus>InProgress</ticketStatus>
     <!-- CC list of other users to whom the notification will be sent :optional -->
     <ccList>
       <ccUser>100001</ccUser>
@@ -81,6 +81,12 @@
         <commentUser>200002</commentUser>
         <commentDate>2021-08-12T05:05:36</commentDate>
         <commentString>Checking whether automated ticket time update is working</commentString>
+      </comment>
+      <comment>
+        <commentID>9</commentID>
+        <commentUser>200005</commentUser>
+        <commentDate>2021-08-12T11:39:14</commentDate>
+        <commentString>asddadadas</commentString>
       </comment>
     </comments>
   </ticket>
@@ -192,5 +198,15 @@
         <commentString>I need a new keyboard as the current one is not working</commentString>
       </comment>
     </comments>
+  </ticket>
+  <ticket lastUpdated="2021-08-12T11:33:33">
+    <ticketID>10007</ticketID>
+    <issueDate>2021-08-12T11:33:33</issueDate>
+    <ticketDeadline>2021-08-13T12:00:00</ticketDeadline>
+    <ticketSubject>Mouse Replacement</ticketSubject>
+    <ticketOwner>200005</ticketOwner>
+    <ticketAssignee>200002</ticketAssignee>
+    <ticketStatus>Backlog</ticketStatus>
+    <comments />
   </ticket>
 </tickets>

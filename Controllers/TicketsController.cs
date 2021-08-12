@@ -20,6 +20,7 @@ namespace SupportTicketSystem.Controllers
             this.userManager = userManager;
         }
 
+        [Authorize]
         public IActionResult Index()
         {
             IList<Ticket> tickets = new List<Ticket>(); //list of tikets
@@ -30,7 +31,15 @@ namespace SupportTicketSystem.Controllers
             {
                 //only load if the file exists
                 doc.Load(path); //exists, so load
-                XmlNodeList ticketList = doc.GetElementsByTagName("ticket"); //load user elements
+                XmlNodeList ticketList = doc.GetElementsByTagName("ticket");
+                if (User.IsInRole("client"))
+                {
+                    
+                    UserController userController = new UserController(userManager);
+                    var uId = userController.FetchUserID(User.Identity.Name);
+                    ticketList = doc.SelectNodes("//ticket[ticketOwner/text()='" + uId + "']");
+                } 
+                   
                 foreach (XmlElement ticketItem in ticketList)
                 {
                     // get cc list
@@ -297,13 +306,14 @@ namespace SupportTicketSystem.Controllers
         [Authorize]
         public async Task<IActionResult> AddComment(string ticketID, string Content, string AttachmentLink)
         {
-            var user = await userManager.GetUserAsync(HttpContext.User);
+            //var user = await userManager.GetUserAsync(HttpContext.User);
+            //var abc = User.Identity.Name;
             UserController userController = new UserController(userManager);
-            ViewBag.user = user;
+            //ViewBag.user = user;
             Comment newComment = new Comment
             {
                 CommentID = LastCommentId(Convert.ToInt32(ticketID)),
-                Author = userController.FetchUserID(user.Email),
+                Author = userController.FetchUserID(User.Identity.Name),
                 Time = DateTime.Now
 
             };
