@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="tickets">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ticket" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ticketID" type="xs:positiveInteger" />
+                            <xs:element name="issueDate" type="xs:dateTime" />
+                            <xs:element name="ticketDeadline" type="xs:dateTime" />
+                            <xs:element name="ticketSubject" type="xs:string" />
+                            <xs:element name="ticketOwner" type="xs:positiveInteger" />
+                            <xs:element name="ticketAssignee" type="xs:positiveInteger" />
+                            <xs:element name="ticketStatus" type="xs:string" />
+                            <xs:element name="ccList" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ccUser" type="xs:positiveInteger" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="comments">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="comment" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="commentID" type="xs:positiveInteger" />
+                                                    <xs:element name="commentUser" type="xs:positiveInteger" />
+                                                    <xs:element name="commentDate" type="xs:dateTime" />
+                                                    <xs:element name="commentString" type="xs:string" />
+                                                    <xs:element name="attachment" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="lastUpdated" type="xs:dateTime" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

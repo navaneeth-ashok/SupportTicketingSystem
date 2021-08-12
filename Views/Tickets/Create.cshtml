@@ -1,0 +1,72 @@
+﻿@model SupportTicketSystem.Models.Ticket
+@using Microsoft.AspNetCore.Identity;
+@{
+    ViewData["Title"] = "Create Ticket";
+    IdentityUser user = ViewBag.user;
+    var userList = ViewBag.userList;
+    var statusList = ViewBag.statusList;
+}
+
+<h1>Create</h1>
+
+<h4>Ticket</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TicketID" class="control-label"></label>
+                <input asp-for="TicketID" class="form-control" />
+                <span asp-validation-for="TicketID" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+            <label asp-for="LastUpdated" class="control-label"></label>
+            <input asp-for="LastUpdated" class="form-control" />
+            <span asp-validation-for="LastUpdated" class="text-danger"></span>
+        </div>*@
+            <div class="form-group">
+                <label asp-for="IssueDate" class="control-label"></label>
+                <input name="IssueDate" type="text" class="form-control" value="@DateTime.UtcNow" readonly />
+                <span asp-validation-for="IssueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Deadline" class="control-label"></label>
+                <input asp-for="Deadline" class="form-control" />
+                <span asp-validation-for="Deadline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Subject" class="control-label"></label>
+                <input asp-for="Subject" class="form-control" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OwnerName" class="control-label"></label>
+                <input asp-for="OwnerName" class="form-control" value="@user.UserName" readonly />
+            </div>
+            <div class="form-group">
+                <label for="ccList" class="control-label"></label>
+                <input type="text" name="ccList" class="form-control" placeholder="comma seperated userIDs eg 10001, 10002..."/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Assignee" class="control-label"></label>
+                @Html.DropDownList("Assignee", (IEnumerable<SelectListItem>)userList, "Select Assignee", new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                @Html.DropDownList("Status", (IEnumerable<SelectListItem>)statusList, "Select Status", new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

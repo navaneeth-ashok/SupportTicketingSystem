@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tickets.xsd">
+  <!-- lastUpdate automatically populated on every comment -->
+  <ticket lastUpdated="2021-08-12T05:05:36">
+    <ticketID>10001</ticketID>
+    <!-- start date -->
+    <issueDate>2021-05-24T10:30:00</issueDate>
+    <ticketDeadline>2021-05-30T23:59:59</ticketDeadline>
+    <ticketSubject>Windows Update Failing</ticketSubject>
+    <!-- client ID -->
+    <ticketOwner>200001</ticketOwner>
+    <!-- current assignee ID -->
+    <ticketAssignee>100001</ticketAssignee>
+    <!-- status Ongoing/Resolved/NotABug -->
+    <ticketStatus>ToDo</ticketStatus>
+    <!-- CC list of other users to whom the notification will be sent :optional -->
+    <ccList>
+      <ccUser>100001</ccUser>
+      <ccUser>100002</ccUser>
+      <ccUser>100003</ccUser>
+    </ccList>
+    <!-- Comment format -->
+    <comments>
+      <comment>
+        <!-- Incrementing comment ID -->
+        <commentID>1</commentID>
+        <!-- UserID of the comment origin -->
+        <commentUser>200001</commentUser>
+        <!-- Timestamp of comment -->
+        <commentDate>2021-05-24T10:30:00</commentDate>
+        <!-- Comment string -->
+        <commentString>I am having issues with my laptop's Windows10 update.
+
+          Once the update is downloaded the system is prompting me to contact support.
+
+          I've uploaded a screenshot of the pop-up box as well.
+        </commentString>
+        <!-- attachment filepath associated with the comment :optional -->
+        <attachment>10001/image1.png</attachment>
+      </comment>
+      <comment>
+        <commentID>2</commentID>
+        <commentUser>100002</commentUser>
+        <commentDate>2021-05-24T11:30:00</commentDate>
+        <commentString>Assigning to John Doe</commentString>
+      </comment>
+      <comment>
+        <commentID>3</commentID>
+        <commentUser>100001</commentUser>
+        <commentDate>2021-05-24T13:30:00</commentDate>
+        <commentString>Hey Spiderman, could you run the following command in cmd prompt and attach the log file? cmd: diag.exe</commentString>
+      </comment>
+      <comment>
+        <commentID>4</commentID>
+        <commentUser>100001</commentUser>
+        <commentDate>2021-05-28T16:45:01</commentDate>
+        <commentString>Hey JohnDoe, Please find the attached diagnostic logs</commentString>
+        <attachment>10001/diag.log</attachment>
+      </comment>
+      <comment>
+        <commentID>5</commentID>
+        <commentUser>200002</commentUser>
+        <commentDate>2021-08-12T03:31:06</commentDate>
+        <commentString>new comment</commentString>
+        <attachment>youtube.com/asdasdad</attachment>
+      </comment>
+      <comment>
+        <commentID>6</commentID>
+        <commentUser>200002</commentUser>
+        <commentDate>2021-08-12T04:54:26</commentDate>
+        <commentString>Reassigning to John Doe</commentString>
+      </comment>
+      <comment>
+        <commentID>7</commentID>
+        <commentUser>200002</commentUser>
+        <commentDate>2021-08-12T05:03:42</commentDate>
+        <commentString>Checking whether automated ticket time update is working</commentString>
+      </comment>
+      <comment>
+        <commentID>8</commentID>
+        <commentUser>200002</commentUser>
+        <commentDate>2021-08-12T05:05:36</commentDate>
+        <commentString>Checking whether automated ticket time update is working</commentString>
+      </comment>
+    </comments>
+  </ticket>
+  <ticket lastUpdated="2021-06-14T16:45:01">
+    <ticketID>10002</ticketID>
+    <!-- start date -->
+    <issueDate>2021-06-14T10:30:00</issueDate>
+    <ticketDeadline>2021-06-30T23:59:59</ticketDeadline>
+    <ticketSubject>New Keyboard</ticketSubject>
+    <!-- client ID -->
+    <ticketOwner>200001</ticketOwner>
+    <!-- current assignee ID -->
+    <ticketAssignee>200001</ticketAssignee>
+    <!-- status Ongoing/Resolved/NotABug -->
+    <ticketStatus>Backlog</ticketStatus>
+    <!-- CC list of other users to whom the notification will be sent :optional -->
+    <ccList>
+      <ccUser>100001</ccUser>
+      <ccUser>100002</ccUser>
+      <ccUser>100003</ccUser>
+    </ccList>
+    <!-- Comment format -->
+    <comments>
+      <comment>
+        <!-- Incrementing comment ID -->
+        <commentID>1</commentID>
+        <!-- UserID of the comment origin -->
+        <commentUser>200001</commentUser>
+        <!-- Timestamp of comment -->
+        <commentDate>2021-06-14T10:30:00</commentDate>
+        <!-- Comment string -->
+        <commentString>My keyboard is not working, Please provide a new keyboard.
+        </commentString>
+        <!-- attachment filepath associated with the comment :optional -->
+      </comment>
+      <comment>
+        <commentID>2</commentID>
+        <commentUser>100002</commentUser>
+        <commentDate>2021-06-14T11:30:00</commentDate>
+        <commentString>Assigning to John Doe</commentString>
+      </comment>
+      <comment>
+        <commentID>3</commentID>
+        <commentUser>100001</commentUser>
+        <commentDate>2021-05-14T13:30:00</commentDate>
+        <commentString>Provided new keyboard</commentString>
+      </comment>
+      <comment>
+        <commentID>4</commentID>
+        <commentUser>100001</commentUser>
+        <commentDate>2021-06-14T16:45:01</commentDate>
+        <commentString>Hey Team, received the keyboard.</commentString>
+      </comment>
+    </comments>
+  </ticket>
+  <ticket lastUpdated="2021-08-12T12:25:19">
+    <ticketID>10003</ticketID>
+    <issueDate>2021-08-12T12:25:19</issueDate>
+    <ticketDeadline>2021-08-13T12:00:00</ticketDeadline>
+    <ticketSubject>Laptop not booting</ticketSubject>
+    <ticketOwner>200002</ticketOwner>
+    <ticketAssignee>200002</ticketAssignee>
+    <ticketStatus>Resolved</ticketStatus>
+    <ccList>
+      <ccUser>1002</ccUser>
+      <ccUser>1004</ccUser>
+      <ccUser>1006</ccUser>
+    </ccList>
+    <comments />
+  </ticket>
+  <ticket lastUpdated="2021-08-12T05:07:54">
+    <ticketID>10004</ticketID>
+    <issueDate>2021-08-12T02:53:45</issueDate>
+    <ticketDeadline>2021-08-13T12:00:00</ticketDeadline>
+    <ticketSubject>USB Drive Not Working</ticketSubject>
+    <ticketOwner>200002</ticketOwner>
+    <ticketAssignee>100001</ticketAssignee>
+    <ticketStatus>InProgress</ticketStatus>
+    <comments />
+  </ticket>
+  <ticket lastUpdated="2021-08-12T05:30:04">
+    <ticketID>10005</ticketID>
+    <issueDate>2021-08-12T05:30:04</issueDate>
+    <ticketDeadline>2021-08-13T12:00:00</ticketDeadline>
+    <ticketSubject>Monitor Replacement</ticketSubject>
+    <ticketOwner>200002</ticketOwner>
+    <ticketAssignee>200001</ticketAssignee>
+    <ticketStatus>Open</ticketStatus>
+    <ccList>
+      <ccUser>1002</ccUser>
+      <ccUser>1004</ccUser>
+      <ccUser>1006</ccUser>
+    </ccList>
+    <comments />
+  </ticket>
+  <ticket lastUpdated="2021-08-12T05:33:26">
+    <ticketID>10006</ticketID>
+    <issueDate>2021-08-12T05:32:58</issueDate>
+    <ticketDeadline>2021-08-13T12:00:00</ticketDeadline>
+    <ticketSubject>Keyboard Replacement</ticketSubject>
+    <ticketOwner>200002</ticketOwner>
+    <ticketAssignee>100001</ticketAssignee>
+    <ticketStatus>Open</ticketStatus>
+    <comments>
+      <comment>
+        <commentID>1</commentID>
+        <commentUser>200002</commentUser>
+        <commentDate>2021-08-12T05:33:22</commentDate>
+        <commentString>I need a new keyboard as the current one is not working</commentString>
+      </comment>
+    </comments>
+  </ticket>
+</tickets>

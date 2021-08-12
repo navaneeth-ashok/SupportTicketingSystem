@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="users.xsd">
+  <!--type = admin/client/guest-->
+  <user type="admin">
+    <userID>100001</userID>
+    <!-- middlename :optional -->
+    <userName>
+      <firstName>John</firstName>
+      <lastName>Doe</lastName>
+    </userName>
+    <!-- credentials -->
+    <userEmail>johndoe@something.com</userEmail>
+    <userPasswordHash>jnfgkjnjfbqawDBhabdh</userPasswordHash>
+    <!-- user dept -->
+    <department>Support</department>
+  </user>
+  <user type="client">
+    <userID>200001</userID>
+    <userName>
+      <firstName>Spi</firstName>
+      <middleName>Der</middleName>
+      <lastName>Man</lastName>
+    </userName>
+    <userEmail>spiderman@avengers.com</userEmail>
+    <userPasswordHash>hsdasbDHausgd6%#^RT</userPasswordHash>
+    <department>Engineering</department>
+  </user>
+  <user type="admin">
+    <userID>200002</userID>
+    <userName>
+      <firstName>Navaneeth</firstName>
+      <middleName>
+      </middleName>
+      <lastName>Ashok</lastName>
+    </userName>
+    <userEmail>navaneeth619@gmail.com</userEmail>
+    <userPasswordHash>AQAAAAEAACcQAAAAEAgtNKBszsJmflE4oyO+fOpyRA3lY+OxyCOvDv97nzHhX08/2GAoyN5jef1+0AihYA==</userPasswordHash>
+    <department>support</department>
+  </user>
+  <user type="Admin">
+    <userID>200003</userID>
+    <userName>
+      <firstName>Navaneeth</firstName>
+      <middleName>
+      </middleName>
+      <lastName>Ashok</lastName>
+    </userName>
+    <userEmail>navaneeth619@gmail.com</userEmail>
+    <userPasswordHash>AQAAAAEAACcQAAAAEAgtNKBszsJmflE4oyO+fOpyRA3lY+OxyCOvDv97nzHhX08/2GAoyN5jef1+0AihYA==</userPasswordHash>
+    <department>TechSupport</department>
+  </user>
+</users>

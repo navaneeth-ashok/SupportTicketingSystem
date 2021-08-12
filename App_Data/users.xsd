@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="users">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="userID" type="xs:positiveInteger" />
+                            <xs:element name="userName">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="firstName" type="xs:string" />
+                                        <xs:element name="middleName" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="lastName" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="userEmail" type="emailAddress" />
+                            <xs:element name="userPasswordHash" type="xs:string" />
+                            <xs:element name="department" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="type" type="userType" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="emailAddress">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@]+@[^\.]+\..+" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="userType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="[Admin][admin]" />
+            <xs:enumeration value="[Support][support]" />
+            <xs:enumeration value="[Client][client]" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

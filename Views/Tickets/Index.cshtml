@@ -1,0 +1,71 @@
+﻿@model IEnumerable<SupportTicketSystem.Models.Ticket>
+
+@{
+    ViewData["Title"] = "Tickets";
+}
+
+<h1>List of tickets</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Ticket</a>
+</p>
+<table class="table table-hover table-borderless">
+    <thead class="border-bottom">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TicketID)
+            </th>
+            <th>
+                @Html.Encode("Last Update")
+            </th>
+            <th>
+                @Html.Encode("Issue Date")
+            </th>
+            <th>
+                @Html.Encode("Deadline")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subject)
+            </th>
+            <th>
+                @Html.Encode("Owner")
+            </th>
+            <th>
+                @Html.Encode("Assignee")
+            </th>
+            <th>
+                @Html.Encode("Status")
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.ActionLink( Convert.ToString(item.TicketID), "Details", new { id = item.TicketID })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastUpdated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IssueDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deadline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssigneeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

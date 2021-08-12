@@ -1,0 +1,21 @@
+﻿<div class="row card m-3 ">
+    <div class="col">
+        <form method="post" action="AddComment">
+            <div class="form-group mt-2">
+                <label for="Content" class="control-label">Comment</label>
+                <textarea name="Content" type="text" class="form-control" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="AttachmentLink" class="control-label">Attachment Link</label>
+                <input name="AttachmentLink" type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add Comment" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
